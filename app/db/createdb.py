@@ -13,7 +13,7 @@ cursor.execute('USE CAMPUS_CONNECTION_DB')
 
 users_table = """
     CREATE TABLE IF NOT EXISTS Usuario(
-        cod_usuario INT AUTO_INCREMENT PRIMARY KEY,
+        cod_usuario INT AUTO_INCREMENT PRIMARY KEY, 
         nome VARCHAR(100),
         email VARCHAR(100),
         senha VARCHAR(100),

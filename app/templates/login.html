@@ -14,24 +14,23 @@
   <body>
     <div class="container">
       <div class="card">
-        <h1>Entrar</h1>
-
-        <div id="msgError"></div>
-
-        <div class="label-float">
-          <input type="text" id="usuario" paceholder="" required />
-          <label id="userLabel" for="usuario">Usuario</label>
-        </div>
-
-        <div class="label-float">
-          <input type="password" id="senha" paceholder="" required />
-          <label id="senhaLabel" for="senha">Senha</label>
-          <i class="fa fa-eye" aria-hidden="true"></i>
-        </div>
-
-        <div class="justify-center">
-          <button onclick="entrar()">Entrar</button>
-        </div>
+        <form action="/get_info_login" method="post">
+          <h1>Entrar</h1>
+          <div id="msgError"></div>
+          <div class="label-float">
+            <input name="email" type="text" id="usuario" paceholder="" required />
+            <label id="userLabel" for="usuario">Email</label>
+          </div>
+          <div class="label-float">
+            {{mensagem}}
+            <input name="senha" type="password" id="senha" paceholder="" required />
+            <label id="senhaLabel" for="senha">Senha</label>
+            <i class="fa fa-eye" aria-hidden="true"></i>
+          </div>
+          <div class="justify-center">
+            <button type="submit">Entrar</button>
+          </div>
+        </form>
 
         <div class="justify-center">
           <hr />
