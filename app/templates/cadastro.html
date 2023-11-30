@@ -1,117 +1,54 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale1.0" />
-    <script
-      src="https://kit.fontawesome.com/64d58efce2.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Entrar & Formulário de inscrição</title>
-    <script src="../static/js/app.js"></script>
-    <link rel="stylesheet" href="../static/css/style.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../static/css/cadastro.css" />
+    <title>Singup</title>
   </head>
   <body>
     <div class="container">
-      <div class="forms-container">
-        <div class="signin-signup">
-          <form action="" class="sign-in-form">
-            <h2 class="title">Entrar</h2>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
-            </div>
-            <input type="submit" value="Login" class="btn solid" />
+      <div class="card">
+        <h1>Cadastrar</h1>
 
-            <p class="social-text">Ou Faça Login com outra plataforma social</p>
-            <div class="social-media">
-              <a href="#" class="social-icon">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-google"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </div>
-          </form>
+        <div id="msgError"></div>
+        <div id="msgSuccess"></div>
 
-          <form action="" class="sign-up-form">
-            <h2 class="title">Cadastra-se</h2>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-envelope"></i>
-              <input type="text" placeholder="Email" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
-            </div>
-            <input type="submit" value="Cadastrar" class="btn solid" />
-
-            <p class="social-text">
-              Ou Faça o cadastro com outra plataforma social
-            </p>
-            <div class="social-media">
-              <a href="#" class="social-icon">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-google"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <div class="panels-container">
-        <div class="panel left-panel">
-          <div class="content">
-            <h3>Você é novo aqui?</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta
-              omnis incidunt quasi!
-            </p>
-            <button class="btn transparent" id="sign-up-btn">
-              Cadastra-se
-            </button>
-          </div>
-
-          <img src="img/cadastrar.svg" class="image" alt="" />
+        <div class="label-float">
+          <input type="text" id="nome" placeholder=" " required />
+          <label id="labelNome" for="nome">Nome</label>
         </div>
 
-        <div class="panel right-panel">
-          <div class="content">
-            <h3>Você já faz parte de nós?</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta
-              omnis incidunt quasi!
-            </p>
-            <button class="btn transparent" id="sign-in-btn">Logar</button>
-          </div>
+        <div class="label-float">
+          <input type="text" id="usuario" placeholder=" " required />
+          <label id="labelUsuario" for="usuario">Usuário</label>
+        </div>
 
-          <img src="img/logar.svg" class="image" alt="" />
+        <div class="label-float">
+          <input type="password" id="senha" placeholder=" " required />
+          <label id="labelSenha" for="senha">Senha</label>
+          <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
+        </div>
+
+        <div class="label-float">
+          <input type="password" id="confirmSenha" placeholder=" " required />
+          <label id="labelConfirmSenha" for="confirmSenha"
+            >Confirmar Senha</label
+          >
+          <i id="verConfirmSenha" class="fa fa-eye" aria-hidden="true"></i>
+        </div>
+
+        <div class="justify-center">
+          <button onclick="cadastrar()">Cadastrar</button>
         </div>
       </div>
     </div>
 
-    <script src="app.js"></script>
+    <script src="../static/js/cadastro.js"></script>
   </body>
 </html>
