@@ -1,0 +1,691 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Baloo+Bhai+2&family=Lato:wght@700&family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 1000px;
+    overflow-x: hidden;
+    background: #f4f9f4;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0px 100px;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    background-color: #e2ede8;
+}
+
+header .img-logo {
+    width: 18%;
+}
+
+header .navigation {
+    position: relative;
+    display: flex;
+}
+
+header .navigation li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+header .navigation a {
+    text-decoration: none;
+    color: #494f4e;
+    font-family: 'Baloo Bhai 2';
+    font-weight: 300;
+    font-size: 20px;
+}
+
+header .navigation a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #6c9894;
+    transition: width .3s;
+}
+
+header .navigation a:hover::after {
+    width: 100%;
+}
+
+section.topo {
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+section.topo .content {
+    display: flex;
+}
+
+section.topo .imagem-topo,
+.texto-topo {
+    width: 60%;
+    /* padding: 20px; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.topo .imagem-topo img {
+    width: 60%;
+}
+
+section.topo .texto-topo h2 {
+    color: #6c9894;
+    text-align: center;
+    font-family: 'Baloo Bhai 2';
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+section.topo .texto-topo p {
+    text-align: justify;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 1px;
+}
+
+section.topo .texto-topo a {
+    background-color: #6c9894;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    border-radius: 5px;
+    text-decoration: none;
+    width: 30%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    transition: 0.5s;
+}
+
+section.topo .texto-topo a:hover {
+    letter-spacing: 5px;
+    opacity: 0.8;
+}
+
+/*  */
+
+section.carousel {
+    background-color: #6c9894;
+}
+
+section.carousel h2 {
+    color: #fff;
+    font-family: 'Baloo Bhai 2';
+    font-weight: bolder;
+    font-size: 60px;
+    padding-top: 30px;
+}
+
+section.carousel p {
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+    color: #fff;
+}
+
+section.carousel h5 {
+    color: #fff;
+    font-family: 'Baloo Bhai 2';
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+section.carousel .slider-card {
+    padding: 0px 0px;
+    margin: 50px 15px 90px 15px;
+    border-radius: 5px;
+    box-shadow: 0 15px 45px -20px rgb(0 0 0 / 73%);
+    transform: scale(0.9);
+    transition: all 0.3s;
+}
+
+section.carousel .slider-card img {
+    border-radius: 5px 5px 0px 0px;
+}
+
+section.carousel .owl-nav .owl-prev {
+    position: absolute;
+    top: calc(50% - 25px);
+    left: 0;
+    opacity: 1;
+    font-size: 30px !important;
+    z-index: 1;
+    color: #fff;
+}
+
+section.carousel .owl-nav .owl-next {
+    position: absolute;
+    top: calc(50% - 25px);
+    right: 0;
+    opacity: 1;
+    font-size: 30px !important;
+    z-index: 1;
+    color: #fff;
+}
+
+section.instructor {
+    display: flex;
+    justify-content: center;
+}
+
+section.instructor .content-left {
+    width: 50%;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+section.instructor .content-left,
+.content-right {
+    width: 50%;
+}
+
+section.instructor .content-left h2 {
+    color: #6c9894;
+    font-family: 'Baloo Bhai 2';
+    font-weight: bolder;
+    font-size: 60px;
+}
+
+section.instructor .content-left p {
+    text-align: justify;
+    color: #494f4e;
+}
+
+section.instructor .content-left a {
+    background-color: #6c9894;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    border-radius: 5px;
+    text-decoration: none;
+    width: 50%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+section.instructor .content-left a:hover {
+    letter-spacing: 5px;
+    opacity: 0.8;
+}
+
+section.instructor .content-right img {
+    width: 100%;
+    float: right;
+    object-fit: cover;
+}
+
+section.experience {
+    display: flex;
+    justify-content: center;
+    background: #6c9894;
+}
+
+section.experience .content-left {
+    width: 50%;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+section.experience .content-left,
+.content-right {
+    width: 50%;
+}
+
+section.experience .content-left h2 {
+    color: #fff;
+    font-family: 'Baloo Bhai 2';
+    font-weight: bolder;
+    font-size: 60px;
+}
+
+section.experience .content-left p {
+    text-align: justify;
+    color: #fff;
+}
+
+section.experience .content-left a {
+    background-color: #fff;
+    color: #6c9894;
+    font-family: 'Lato', sans-serif;
+    border-radius: 5px;
+    text-decoration: none;
+    width: 50%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+section.experience .content-left a:hover {
+    letter-spacing: 5px;
+    opacity: 0.8;
+}
+
+section.experience .content-right img {
+    width: 100%;
+    float: right;
+    object-fit: cover;
+}
+
+section.pricing {
+    padding: 100px;
+}
+
+section.pricing h2 {
+    text-align: center;
+    color: #6c9894;
+    font-family: 'Baloo Bhai 2';
+    font-weight: bolder;
+    font-size: 60px;
+    padding-top: 30px;
+}
+
+section.pricing p {
+    color: #494f4e;
+    text-align: justify;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+}
+
+section.pricing .cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+section.pricing .card {
+    width: 30%;
+    padding: 30px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px #888888;
+}
+
+section.pricing h3 {
+    text-align: center;
+    font-family: 'Baloo Bhai 2';
+    font-weight: bolder;
+}
+
+section.pricing .price,
+#descricao {
+    text-align: center;
+    padding: 0;
+}
+
+section.pricing .card img {
+    width: 50%;
+    margin: 0 auto;
+}
+
+section.pricing a {
+    background-color: #6c9894;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    transition: 0.5s;
+}
+
+section.pricing a:hover {
+    letter-spacing: 5px;
+    opacity: 0.8;
+}
+
+section.tutor {
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-image:url("/img/ceu.jpg");
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+}
+
+section.tutor span {
+    color: #6c9894;
+    text-align: center;
+    font-family: 'Baloo Bhai 2';
+    font-weight: bolder;
+    font-size: 60px;
+}
+
+section.update {
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #6c9894;
+}
+
+section.update h2 {
+    color: #fff;
+    text-align: center;
+    font-family: 'Baloo Bhai 2';
+    font-weight: bolder;
+    font-size: 60px;
+}
+
+section.update p {
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+
+section.update .div-btn {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+section.update input {
+    border-radius: 5px;
+    border: none;
+    height: 30px;
+    width: 50%;
+    padding: 5px;
+}
+
+section.update input:focus {
+    outline: 0;
+}
+
+section.update button {
+    border-radius: 5px;
+    border: none;
+    height: 30px;
+    width: 20%;
+    padding: 5px;
+}
+
+footer {
+    padding: 100px;
+    border-top: 5px solid #fff;
+    background-color: #6c9894;
+    color: #fff;
+}
+
+footer .content-footer {
+    display: flex;
+}
+
+footer h3 {
+    text-align: center;
+    font-family: 'Baloo Bhai 2';
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+footer p {
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+footer .title {
+    width: 40%;
+}
+
+footer .about,
+.services,
+.follow {
+    width: 40%;
+}
+
+footer .follow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .follow img {
+    margin-top: 10px;
+    max-width: 100%;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+footer .follow img:hover {
+    -moz-transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4);
+}
+
+
+/* MEDIA */
+
+@media (max-width: 991px) {
+
+    header,
+    header.sticky {
+        padding: 10px 20px;
+    }
+
+    header .navigation {
+        display: none;
+    }
+
+    header .navigation.active {
+        width: 100%;
+        height: calc(100% - 68px);
+        position: fixed;
+        top: 85px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #6c9894;
+    }
+
+    header .navigation li {
+        margin-left: 0;
+    }
+
+    header .navigation li a {
+        color: #fff;
+        font-size: 30px;
+    }
+
+    .menuToggle {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: url("/img/menu-header.png");
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+
+    .menuToggle.active {
+        background: url("/img/close.png");
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    section.topo {
+        padding: 20px;
+        position: relative;
+        top: 100px;
+        margin-bottom: 150px;
+    }
+
+    section.topo .content {
+        flex-direction: column;
+    }
+
+    section.topo .imagem-topo,
+    .texto-topo {
+        width: auto;
+    }
+
+    section.topo h2 {
+        font-size: 30px;
+    }
+
+    section.carousel h2 {
+        font-size: 30px;
+    }
+
+    section.carousel .owl-nav .owl-prev {
+        left: 10px;
+    }
+
+    section.carousel .owl-nav .owl-next {
+        right: 10px;
+    }
+
+    section.instructor {
+        flex-direction: column;
+    }
+
+    section.instructor .content-left h2 {
+        font-size: 30px;
+    }
+
+    section.instructor .content-left,
+    .content-right {
+        width: auto;
+    }
+
+    section.instructor .content-left a {
+        width: 100%;
+    }
+
+    section.experience {
+        flex-direction: column;
+    }
+
+    section.experience .content-left h2 {
+        font-size: 30px;
+    }
+
+    section.experience .content-left,
+    .content-right {
+        width: auto;
+    }
+
+    section.experience .content-left a {
+        width: 100%;
+    }
+
+    section.pricing {
+        padding: 20px;
+    }
+
+    section.pricing h2 {
+        font-size: 30px;
+    }
+
+    section.pricing .cards {
+        flex-direction: column;
+    }
+
+
+    section.pricing .card {
+        width: auto;
+        margin-bottom: 10px;
+    }
+
+    section.tutor {
+        padding: 20px;
+        background-position: center;
+    }
+
+    section.tutor img {
+        width: 100%;
+    }
+
+    section.tutor p {
+        padding: 10px;
+        text-align: center;
+    }
+
+    section.tutor span {
+        font-size: 30px;
+    }
+
+    section.update {
+        padding: 20px;
+    }
+
+    section.update h2 {
+        font-size: 30px;
+    }
+
+    section.update input {
+        width: auto;
+    }
+
+    section.update button {
+        width: auto;
+    }
+
+    footer {
+        padding: 20px;
+    }
+
+    footer .content-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .title,
+    .about,
+    .services {
+        border-bottom: 1px solid #fff;
+        margin: 10px;
+    }
+
+    footer .title {
+        width: auto;
+    }
+
+    footer .about,
+    .services,
+    .follow {
+        width: auto;
+    }
+
+}
