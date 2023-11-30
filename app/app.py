@@ -16,10 +16,11 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/login')
+@app.route('/cadastro')
 def login():
     return render_template('cadastro.html')
 
+<<<<<<< HEAD
 @app.route('/cadastro', methods = ['POST'])
 def cadastrar_usuario():
     nome = request.form['nome']
@@ -33,6 +34,11 @@ def cadastrar_usuario():
     print(mycursor.rowcount)
 
     return 'cadastro concluido'
+=======
+@app.route('/login')
+def login():
+    return render_template('login.html')
+>>>>>>> c1c9159f866971e22b621c8ff8d99a5e2049f155
 
 if __name__ == '__main__':
     app.run(debug=True)
