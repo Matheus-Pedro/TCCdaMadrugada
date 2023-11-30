@@ -12,31 +12,32 @@ cursor.execute('CREATE DATABASE IF NOT EXISTS CAMPUS_CONNECTION_DB')
 cursor.execute('USE CAMPUS_CONNECTION_DB')
 
 users_table = """
-    CREATE TABLE IF NOT EXISTS USUARIOS(
-        COD_USUARIO INT AUTO_INCREMENT PRIMARY KEY,
-        NOME VARCHAR(100),
-        EMAIL VARCHAR(100),
-        SENHA VARCHAR(100),
-        STATUS TINYINT
+    CREATE TABLE IF NOT EXISTS Usuario(
+        cod_usuario INT AUTO_INCREMENT PRIMARY KEY,
+        nome VARCHAR(100),
+        email VARCHAR(100),
+        senha VARCHAR(100),
+        status TINYINT
     )
 """
 
 colleges_table = """
-    CREATE TABLE IF NOT EXISTS UNIVERSIDADES(
-        COD_UNIVERSIDADE INT AUTO_INCREMENT PRIMARY KEY,
-        NOME VARCHAR(240),
-        DESCRICAO VARCHAR(1000),
-        LOCALIZACAO VARCHAR(255)
+    CREATE TABLE IF NOT EXISTS Universidade(
+        cod_universidade INT AUTO_INCREMENT PRIMARY KEY,
+        nome VARCHAR(240),
+        descricao VARCHAR(1000),
+        localizacao VARCHAR(255),
+        status TINYINT
     )
 """
 
 images_table = """
-    CREATE TABLE IF NOT EXISTS IMAGENS_UNIVERSIDADE(
-        COD_IMAGEM INT AUTO_INCREMENT PRIMARY KEY,
-        DADOS_IMAGEM BLOB,
-        COD_UNIVERSIDADE INT,
-        STATUS TINYINT,
-        FOREIGN KEY (COD_UNIVERSIDADE) REFERENCES UNIVERSIDADES(COD_UNIVERSIDADE)
+    CREATE TABLE IF NOT EXISTS Imagem_Universidade(
+        cod_imagem INT AUTO_INCREMENT PRIMARY KEY,
+        dados_imagem BLOB,
+        cod_universidade INT,
+        status TINYINT,
+        FOREIGN KEY (cod_universidade) REFERENCES UNIVERSIDADES(cod_universidade)
     )
 """
 
