@@ -3,7 +3,7 @@ import mysql.connector
 connection = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="",
+    password="12345",
     port="3306"
 )
 cursor = connection.cursor()
@@ -37,7 +37,7 @@ images_table = """
         dados_imagem BLOB,
         cod_universidade INT,
         status TINYINT,
-        FOREIGN KEY (cod_universidade) REFERENCES UNIVERSIDADES(cod_universidade)
+        FOREIGN KEY (cod_universidade) REFERENCES Universidade(cod_universidade)
     )
 """
 
