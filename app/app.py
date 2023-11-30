@@ -18,6 +18,10 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/logado')
+def index_logado():
+    return render_template('index_logado.html', mensagem = f"Olá, {nome}")
+
 @app.route('/cadastro')
 def cadastro():
     return render_template('cadastro.html')
@@ -51,24 +55,25 @@ def cadastrar_usuario():
                 data = (nome, email, senha, 1)
                 mycursor.execute(sql, data)
                 mydb.commit()
-                return redirect(url_for('index'))
+                return redirect(url_for('index_logado'))
     
 @app.route('/get_info_login', methods=['GET', 'POST'])
 def logar_usuario():
     if request.method == 'POST':
-        global email, senha
+        global nome, email, senha
         email = request.form['email']
         senha = request.form['senha']
 
         consult_user = f"""
-            SELECT email, senha FROM Usuario WHERE email = '{email}'
+            SELECT nome, email, senha FROM Usuario WHERE email = '{email}'
         """
         mycursor.execute(consult_user)
         result = mycursor.fetchall()
         if len(result) > 0:
-            senha_bd = result[0][1]
+            senha_bd = result[0][2]
+            nome = result[0][0]
             if senha == senha_bd:
-                return redirect(url_for('index'))
+                return redirect(url_for('index_logado'))
             else:
                 return render_template('login.html', mensagem = 'Senha incorreta.')
 
